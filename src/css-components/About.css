@@ -1,0 +1,87 @@
+/************ Custom Colors CSS ************/
+:root {
+    --text-color: #301B11;
+    --background-color-1: #F6F2EE;
+    --background-color-2: #EFE7DF;
+    --main-accent-color: #CC907B;
+    --accent-color-1: #E5BCAD;
+    --accent-color-2: #E6D4C4;
+    --accent-color-3: #F6E0D6;
+}
+
+/************ About Me CSS ************/
+.about {
+    padding: 150px 0 100px 0;
+    position: relative;
+    background-color: var(--background-color-2);
+  }
+  .about-bx {
+    background: rgb(46, 35, 72, 0.5);
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 10% 20px 10%;
+    margin-top: -60px;
+    z-index: 1;
+  }
+  
+  .EWCIsha1 {
+    width: 55%;
+    padding: 2% 0% 2% 0%;
+    border-radius: 15%;
+  }
+  
+  .about h2 {
+      font-size: 45px;
+      font-weight: 700;
+  }
+  .about p {
+      color: var(--text-color);
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      line-height: 1.5em;
+      margin: 14px 0 75px 0;
+  }
+  .background-image-left-top {
+    top: -20%;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    z-index: -4;
+  }
+  
+  .about p{
+    text-align: left;
+  }
+  
+  .about span{
+    color: var(--accent-dark);
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .about a {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 60px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .about a:hover svg {
+    margin-left: 25px;
+  }
+  .about a:hover{
+    color: var(--accent-dark);
+  }
+  
+  .background-image-right-bottom {
+    top: 50%;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    right: 0%;
+    left: 70%;
+    z-index: 1;
+  }

@@ -1,0 +1,168 @@
+/************ Custom Colors CSS ************/
+:root {
+    --text-color: #301B11;
+    --background-color-1: #F6F2EE;
+    --background-color-2: #EFE7DF;
+    --main-accent-color: #CC907B;
+    --accent-color-1: #E5BCAD;
+    --accent-color-2: #E6D4C4;
+    --accent-color-3: #F6E0D6;
+}
+
+@font-face {
+	font-family: CatchyMager;
+	src: url('../assets/font/CatchyMagerRegular.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: CocoGothicBold;
+	src: url('../assets/font/CocoGothicBold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: CocoGothicRegular;
+	src: url('../assets/font/CocoGothicRegular.ttf');
+	font-weight: 700;
+}
+/************ Navbar CSS ************/
+nav.navbar {
+    /* padding: 18px 0px; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition:  0.32s ease-in-out;
+  }
+  
+  /* Navbar on smaller devices (non-desktop/non-laptop) */
+  @media (max-width: 800px) {
+    nav.navbar {
+      background-color: var(--background-color-1);
+      color: var(--text-color);
+    }
+  }
+  
+  nav.navbar.scrolled {
+    /* padding: 18px 0px 0px 0px; */
+    background-color: var(--background-color-1);
+  }
+  nav.navbar a.navbar-brand {
+      width: 9%;
+  }
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-weight: 400;
+    color: var(--text-color) !important;
+    letter-spacing: 0.8px;
+    padding: 0 25px;
+    font-size: 18px;
+    opacity: 0.75;
+  }
+  nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+  nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+      opacity: 1;
+  }
+  span.navbar-text {
+      display: flex;
+      align-items: center;
+  }
+  
+  .navbar-text button {
+    font-weight: 700;
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-1);
+    padding: 18px 34px;
+    font-size: 18px;
+    margin-left: 18px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar-text button span {
+    z-index: 1;
+  }
+  .navbar-text button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--accent-color-1);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar-text button:hover {
+    color: var(--text-color);
+  }
+  .navbar-text button:hover::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+  }
+  nav.navbar .navbar-toggler:active,
+  nav.navbar .navbar-toggler:focus {
+      outline: none;
+    box-shadow: none;
+    padding: 18px 34px;
+  }
+  nav.navbar .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 2px solid #fff;
+    transition: all 300ms linear;
+    top: 22px;
+  }
+  nav.navbar .navbar-toggler-icon:focus {
+      border-bottom: 2px solid #fff;
+  }
+  nav.navbar .navbar-toggler-icon:after,
+  nav.navbar .navbar-toggler-icon:before {
+      width: 24px;
+      position: absolute;
+      height: 2px;
+      background-color: var(--background-color-1);
+      top: 0;
+      left: 0;
+      content: '';
+      z-index: 2;
+      transition: all 300ms linear;
+  }
+  nav.navbar .navbar-toggler-icon:after {
+      top: 8px;
+  }
+  nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+      transform: rotate(45deg);
+      background-color: var(--background-color-1);
+      height: 2px;
+  }
+  nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+      transform: translateY(8px) rotate(-45deg);
+      background-color: var(--background-color-1);
+      height: 2px;
+  }
+  nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+      border-color: transparent;
+  }
+  
+  .navbar h1 {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: relative;
+    color: var(--main-accent-color);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+
+    font-weight: 700;
+    letter-spacing: 2.25px;
+
+    font-size: 20px;
+    font-family: 'CocoGothicRegular', sans-serif;
+  }

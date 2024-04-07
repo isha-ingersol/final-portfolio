@@ -1,0 +1,124 @@
+/************ Custom Colors CSS ************/
+:root {
+    --text-color: #301B11;
+    --background-color-1: #F6F2EE;
+    --background-color-2: #EFE7DF;
+    --main-accent-color: #CC907B;
+    --accent-color-1: #E5BCAD;
+    --accent-color-2: #E6D4C4;
+    --accent-color-3: #F6E0D6;
+}
+
+@font-face {
+	font-family: CatchyMager;
+	src: url('../assets/font/CatchyMagerRegular.ttf');
+	font-weight: 700;
+}
+
+/* .accordion {
+    background: var(--background-color-1);
+    border-radius: 64px;
+    padding: 60px 50px;
+} */
+
+.box1 {
+    background: var(--accent-color-1);
+    border-radius: 70px;
+    padding: 40px 40px 30px 40px;
+}
+.accordion-content.programming-languages {
+    background: var(--background-color-1);
+    border-radius: 64px;
+    padding: 30px 10px 0px 10px;
+}
+
+.box2 {
+    background: var(--accent-color-2);
+    border-radius: 70px;
+    padding: 40px 40px 30px 40px;
+}
+.accordion-content.data-science {
+    background: var(--background-color-1);
+    border-radius: 64px;
+    padding: 30px 10px 0px 10px;
+}
+
+.box3 {
+    background: var(--accent-color-3);
+    border-radius: 70px;
+    padding: 40px 40px 30px 40px;
+}
+.accordion-content.web-development {
+    background: var(--background-color-1);
+    border-radius: 64px;
+    padding: 30px 10px 0px 10px;
+}
+
+.box4 {
+    background: var(--accent-color-1);
+    border-radius: 70px;
+    padding: 40px 40px 30px 40px;
+}
+.accordion-content.ai-ml {
+    background: var(--background-color-1);
+    border-radius: 64px;
+    padding: 30px 10px 0px 10px;
+}
+
+.box5 {
+    background: var(--accent-color-2);
+    border-radius: 70px;
+    /* padding: 10px 10px; */
+    padding: 40px 40px 30px 40px;
+}
+.accordion-content.other-technical-skills {
+    background: var(--background-color-1);
+    border-radius: 64px;
+    padding: 30px 10px 0px 10px;
+}
+
+
+/************ Skills CSS ************/
+.skill {
+    padding: 150px 0 100px 0;
+    position: relative;
+    background-color: var(--background-color-2);
+  }
+  .skill h2 {
+      font-size: 35px;
+      font-weight: 700;
+      letter-spacing: 7.5px;
+      font-family: 'CocoGothicBold', sans-serif;
+  }
+
+  .skill h4 {
+    font-weight: 700;
+    padding: 0px 0 15px 0;
+    font-family: 'CatchyMager', sans-serif;
+    font-size: 30px;
+}
+
+  .skill p {
+    color: var(--text-color);
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+    text-align: justify center;
+  }
+  
+  .skill-name {
+    color: var(--text-color);
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0px 0 0px;
+    text-align: justify center;
+    overflow-wrap: break-word;
+  }
+  
+  .skill span{
+    color: var(--text-color);
+    font-weight: bold;
+    font-style: italic;
+  }
