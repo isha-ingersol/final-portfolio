@@ -77,37 +77,37 @@
     padding: 30px 10px 0px 10px;
 }
 
-
 /************ Skills CSS ************/
 .skill {
     padding: 150px 0 100px 0;
     position: relative;
     background-color: var(--background-color-2);
-  }
-  .skill h2 {
+}
+
+.skill h2 {
       font-size: 35px;
       font-weight: 700;
       letter-spacing: 7.5px;
       font-family: 'CocoGothicBold', sans-serif;
-  }
+}
 
-  .skill h4 {
+.skill h4 {
     font-weight: 700;
     padding: 0px 0 15px 0;
     font-family: 'CatchyMager', sans-serif;
     font-size: 30px;
 }
 
-  .skill p {
+.skill p {
     color: var(--text-color);
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
     text-align: justify center;
-  }
+}
   
-  .skill-name {
+.skill-name {
     color: var(--text-color);
     font-size: 18px;
     letter-spacing: 0.8px;
@@ -115,10 +115,10 @@
     margin: 14px 0px 0 0px;
     text-align: justify center;
     overflow-wrap: break-word;
-  }
+}
   
-  .skill span{
+.skill span{
     color: var(--text-color);
     font-weight: bold;
     font-style: italic;
-  }
+}

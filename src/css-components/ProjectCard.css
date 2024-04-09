@@ -66,21 +66,40 @@
 }
 
 /* Media query for mobile devices */
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     .project-card .card-title {
         text-align: left;
-        margin-left: -90px;
+        margin-left: -80px;
     }
   
     .project-card .card-text {
         text-align: left;
-        margin-left: -90px;
+        margin-left: -80px;
         margin-top: 0;
     }
 
     .project-card .card-img {
         display: none;
       }
-  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 1024px) {
+    .project-card .card-title {
+        text-align: left;
+        margin-left: -80px;
+        padding: 10px;
+    }
   
-  
+    .project-card .card-text {
+        text-align: left;
+        margin-left: -80px;
+        margin-top: 0;
+
+        padding: 10px;
+    }
+
+    .project-card .card-img {
+        display: none;
+    }
+}

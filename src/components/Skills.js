@@ -87,6 +87,11 @@ const webdevelopment = [
     altText: 'JavaScript'
   },
   {
+    name: 'TypeScript',
+    imgSrc: TypeScript,
+    altText: 'TypeScript'
+  },
+  {
     name: 'AngularJS',
     imgSrc: Angular,
     altText: 'AngularJS/Angular.JS'
@@ -102,19 +107,14 @@ const webdevelopment = [
     altText: 'NodeJS/Node.JS'
   },
   {
-    name: 'TypeScript',
-    imgSrc: TypeScript,
-    altText: 'TypeScript'
+    name: 'Bootstrap',
+    imgSrc: Bootstrap,
+    altText: 'React Bootstrap'
   },
   {
     name: 'TailwindCSS',
     imgSrc: TailwindCSS,
     altText: 'TailwindCSS'
-  },
-  {
-    name: 'Bootstrap',
-    imgSrc: Bootstrap,
-    altText: 'React Bootstrap'
   },
   {
     name: 'MongoDB',
