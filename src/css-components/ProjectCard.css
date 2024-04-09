@@ -64,5 +64,23 @@
     font-family: 'PlayFairDisplayRegular', sans-serif;
     line-height: 1.5;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 320px) {
+    .project-card .card-title {
+        text-align: left;
+        margin-left: -90px;
+    }
+  
+    .project-card .card-text {
+        text-align: left;
+        margin-left: -90px;
+        margin-top: 0;
+    }
+
+    .project-card .card-img {
+        display: none;
+      }
+  }
   
   
