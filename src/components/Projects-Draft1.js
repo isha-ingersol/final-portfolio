@@ -4,9 +4,6 @@ import { ProjectCard } from "./ProjectCard";
 import threads from "../assets/img/project-threads-logo.png";
 import linkedin from "../assets/img/project-LinkedIn-logo.png";
 import maps from "../assets/img/project-maps-logo.svg";
-import upcomingweb from "../assets/img/upcoming-web-dev.png";
-import upcomingmobile from "../assets/img/upcoming-mobile-dev.png";
-import upcomingdatascience from "../assets/img/upcoming-datascience.png";
 import '../css-components/Projects.css';
 
 export const Projects = () => {
@@ -16,62 +13,74 @@ export const Projects = () => {
       description: (
         <>
           Under Development. <br />
-          Technologies Used: <br />
-          TailwindCSS, NextJS, Clerk, <br />
-          TypeScript, and more.
+          Technologies Used: TailwindCSS, NextJS, Clerk, TypeScript, and more.
         </>
       ),
       imgUrl: threads,
-      imgWidth: "180px",
-      imgHeight: "180px",
+      imgWidth: "200px",
+      imgHeight: "200px",
     },
     {
-      title: "Upcoming Project",
+      title: "LinkedIn Clone",
       description: "Under Development",
-      imgUrl: upcomingweb,
-      imgWidth: "180px",
-      imgHeight: "180px",
+      imgUrl: linkedin,
+      imgWidth: "200px",
+      imgHeight: "200px",
     },
-    // {
-    //   title: "Maps Clone",
-    //   description: "Under Development",
-    //   imgUrl: maps,
-    //   imgWidth: "180px",
-    //   imgHeight: "180px",
-    // },
+    {
+      title: "Maps Clone",
+      description: "Under Development",
+      imgUrl: maps,
+      imgWidth: "200px",
+      imgHeight: "200px",
+    },
   ];
 
   const projectsMobileDev = [
     {
-      title: "Upcoming Project",
+      title: "Threads Clone",
       description: "Under Development",
-      imgUrl: upcomingmobile,
-      imgWidth: "180px",
-      imgHeight: "180px",
+      imgUrl: threads,
+      imgWidth: "200px",
+      imgHeight: "200px",
     },
     {
-      title: "Upcoming Project",
+      title: "LinkedIn Clone",
       description: "Under Development",
-      imgUrl: upcomingmobile,
-      imgWidth: "180px",
-      imgHeight: "180px",
+      imgUrl: linkedin,
+      imgWidth: "200px",
+      imgHeight: "200px",
     },
+    {
+      title: "Maps Clone",
+      description: "Under Development",
+      imgUrl: maps,
+      imgWidth: "200px",
+      imgHeight: "200px",
+    }, 
   ];
 
   const projectsDataScience = [
     {
-      title: "Upcoming Project",
+      title: "Threads Clone",
       description: "Under Development",
-      imgUrl: upcomingdatascience,
-      imgWidth: "180px",
-      imgHeight: "180px",
+      imgUrl: threads,
+      imgWidth: "200px",
+      imgHeight: "200px",
     },
     {
-      title: "Upcoming Project",
+      title: "LinkedIn Clone",
       description: "Under Development",
-      imgUrl: upcomingdatascience,
-      imgWidth: "180px",
-      imgHeight: "180px",
+      imgUrl: linkedin,
+      imgWidth: "200px",
+      imgHeight: "200px",
+    },
+    {
+      title: "Maps Clone",
+      description: "Under Development",
+      imgUrl: maps,
+      imgWidth: "200px",
+      imgHeight: "200px",
     },
   ];
 
@@ -107,6 +116,8 @@ export const Projects = () => {
               ))}
             </div>
 
+            <br />
+
             <div className="project-bx-mobiledev">
               <h3>Mobile App Development</h3>
               <br />
@@ -120,6 +131,8 @@ export const Projects = () => {
                 </Row>
               ))}
             </div>
+
+            <br />
 
             <div className="project-bx-datascience">
               <h3>Data Science Projects</h3>

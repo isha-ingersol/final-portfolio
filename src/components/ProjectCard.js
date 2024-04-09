@@ -1,15 +1,21 @@
-import { Col } from "react-bootstrap";
+import React from "react";
+import { Card, Col, Row } from "react-bootstrap";
+import "../css-components/ProjectCard.css"; // Import the CSS file
 
-export const ProjectCard = ({ title, description, imgUrl, imgWidth, imgHeight }) => {
+export const ProjectCard = ({ title, description, imgUrl, imgWidth, imgHeight, tags }) => {
   return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <img src={imgUrl} style={{ width: "75%", height: "75%" }}/>
-        <div className="proj-txtx">
-          <h4>{title}</h4>
-          <span>{description}</span>
-        </div>
-      </div>
-    </Col>
-  )
-}
+    <Card className="project-card">
+      <Card.Body>
+        <Row className="align-items-center">
+          <Col xs={4} md={3}>
+            <Card.Img src={imgUrl} style={{ width: imgWidth, height: imgHeight }} />
+          </Col>
+          <Col xs={8} md={9}>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{description}</Card.Text>
+          </Col>
+        </Row>
+      </Card.Body>
+    </Card>
+  );
+};
