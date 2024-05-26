@@ -33,6 +33,9 @@ import Scratch from "../assets/logos/scratch-cat.svg";
 import Haskell from "../assets/logos/haskell.svg";
 import Agile from "../assets/logos/agile.svg";
 import MS365 from "../assets/logos/microsoft-5.svg";
+import nlp from "../assets/logos/NLP-icon.svg";
+import excel from "../assets/logos/microsoft-excel-icon.svg";
+
 
 import { Type } from 'react-bootstrap-icons';
 import '../css-components/Skills.css';
@@ -176,14 +179,24 @@ const othertechnicalskills = [
 
 const datascience = [
   {
-    name: 'Git',
-    imgSrc: Git,
-    altText: 'Git (GitHub an GitLab)'
+    name: 'Python',
+    imgSrc: python,
+    altText: 'Python Logo'
   },
   {
-    name: 'Scratch',
-    imgSrc: Scratch,
-    altText: 'Scratch (by MIT)'
+    name: 'PostgreSQL',
+    imgSrc: postgresql,
+    altText: 'PostgreSQL (SQL) Database Management System (DBMS)'
+  },
+  {
+    name: 'Natural Language Processing',
+    imgSrc: nlp,
+    altText: 'NLP Logo'
+  },
+  {
+    name: 'Microsoft Excel',
+    imgSrc: excel,
+    altText: 'MS Excel Logo'
   },
 ];
 
@@ -214,7 +227,7 @@ function createRows(items, settings) {
               
               <div class="accordion">
                 <div class="box1">
-                  <div class="accordion-title programming-languages"><h4 style={{textAlign: "center"}}>Programming Languages</h4></div>
+                  <div class="accordion-title programming-languages"><h4 style={{textAlign: "center"}}>All Programming Languages</h4></div>
                   <div class="accordion-content programming-languages" {...programminglanguagessettings}>
                     {createRows(programminglanguages, programminglanguagessettings).map((row, rowIndex) => (
                       <div key={rowIndex} className="row">
