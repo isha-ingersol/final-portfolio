@@ -1,87 +1,143 @@
 /************ Custom Colors CSS ************/
 :root {
-    --text-color: #301B11;
-    --background-color-1: #F6F2EE;
-    --background-color-2: #EFE7DF;
-    --main-accent-color: #CC907B;
-    --accent-color-1: #E5BCAD;
-    --accent-color-2: #E6D4C4;
-    --accent-color-3: #F6E0D6;
+  --text-color: #301B11;
+  --background-color-1: #F6F2EE;
+  --background-color-2: #EFE7DF;
+  --main-accent-color: #CC907B;
+  --accent-color-1: #E5BCAD;
+  --accent-color-2: #E6D4C4;
+  --accent-color-3: #F6E0D6;
+}
+
+@font-face {
+  font-family: CatchyMager;
+  src: url('../assets/font/CatchyMagerRegular.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: CocoGothicBold;
+  src: url('../assets/font/CocoGothicBold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: CocoGothicRegular;
+  src: url('../assets/font/CocoGothicRegular.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: PlayfairDisplayRegular;
+  src: url('../assets/font/PlayfairDisplayRegular.ttf');
+  font-weight: 700;
 }
 
 /************ About Me CSS ************/
 .about {
-    padding: 150px 0 100px 0;
-    position: relative;
-    background-color: var(--background-color-2);
-  }
-  .about-bx {
-    background: rgb(46, 35, 72, 0.5);
-    border-radius: 64px;
-    text-align: center;
-    padding: 60px 10% 20px 10%;
-    margin-top: -60px;
-    z-index: 1;
-  }
-  
-  .EWCIsha1 {
-    width: 55%;
-    padding: 2% 0% 2% 0%;
-    border-radius: 15%;
-  }
-  
-  .about h2 {
-      font-size: 45px;
-      font-weight: 700;
-  }
-  .about p {
-      color: var(--text-color);
-      font-size: 18px;
-      letter-spacing: 0.8px;
-      line-height: 1.5em;
-      margin: 14px 0 75px 0;
-  }
-  .background-image-left-top {
-    top: -20%;
+  padding: 150px 0 50px 0;
+  position: relative;
+  background-color: var(--background-color-2);
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 7.5px;
+  font-family: 'CocoGothicBold', sans-serif;
+}
+
+.about .about-bx {
+  display: flex;
+  flex-direction: row;
+  background: var(--background-color-1);
+  border-radius: 64px;
+  padding: 40px;
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+.about .col-left {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.about .EWCIsha1 {
+  width: 100%;
+  border-radius: 15%;
+}
+
+.about .col-right {
+  flex: 2;
+}
+
+.about p {
+  color: var(--text-color);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0;
+  font-family: 'CatchyMager', sans-serif;
+}
+
+.about span {
+  color: var(--main-accent-color);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.about ol {
+  padding-left: 20px;
+}
+
+.about li {
+  margin-bottom: 10px;
+}
+
+
+
+.about button {
+  color: var(--text-color);
+  border: 1px solid var(--accent-color-1);
+  padding: 18px 45px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+
+  font-weight: 700;
+  letter-spacing: 2.25px;
+
+  font-size: 12px;
+  font-family: 'CocoGothicBold', sans-serif;
+}
+.about button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  /* background-color: var(--accent-color-1); */
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.about button:hover {
+  color: var(--text-color);
+  background-color: var(--accent-color-1);
+}
+.about button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: 0;
-    width: 40%;
-    z-index: -4;
+}
+.resume-button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   }
-  
-  .about p{
-    text-align: left;
-  }
-  
-  .about span{
-    color: var(--accent-dark);
-    font-weight: bold;
-    font-style: italic;
-  }
-  
-  .about a {
-    color: var(--text-color);
-    font-weight: 700;
-    font-size: 20px;
-    margin-top: 60px;
-    letter-spacing: 0.8px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  .about a:hover svg {
-    margin-left: 25px;
-  }
-  .about a:hover{
-    color: var(--accent-dark);
-  }
-  
-  .background-image-right-bottom {
-    top: 50%;
-    position: absolute;
-    bottom: 0;
-    width: 35%;
-    right: 0%;
-    left: 70%;
-    z-index: 1;
-  }
+.resume-button {
+  padding: 10px 20px;
+}
