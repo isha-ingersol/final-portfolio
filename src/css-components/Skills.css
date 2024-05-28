@@ -122,3 +122,40 @@
     font-weight: bold;
     font-style: italic;
 }
+
+  
+/************ Skills CSS (for mobile devices) ************/
+  @media (max-width: 768px) {
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .accordion .accordion-title {
+        padding-top: 10px;
+      }
+    
+    .accordion .box1, .accordion .box2, .accordion .box3, .accordion .box4, .accordion .box5 {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .accordion .accordion-content {
+      display: none;
+    }
+    
+    .accordion .box1:hover .accordion-content,
+    .accordion .box1:focus .accordion-content,
+    .accordion .box2:hover .accordion-content,
+    .accordion .box2:focus .accordion-content,
+    .accordion .box3:hover .accordion-content,
+    .accordion .box3:focus .accordion-content,
+    .accordion .box4:hover .accordion-content,
+    .accordion .box4:focus .accordion-content,
+    .accordion .box5:hover .accordion-content,
+    .accordion .box5:focus .accordion-content {
+      display: block;
+    }
+  }
+  

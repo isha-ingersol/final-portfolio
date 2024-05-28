@@ -73,6 +73,29 @@ const programminglanguages = [
   },
 ];
 
+const datascience = [
+  {
+    name: 'Python',
+    imgSrc: python,
+    altText: 'Python Logo'
+  },
+  {
+    name: 'PostgreSQL',
+    imgSrc: postgresql,
+    altText: 'PostgreSQL (SQL) Database Management System (DBMS)'
+  },
+  {
+    name: 'Natural Language Processing',
+    imgSrc: nlp,
+    altText: 'NLP Logo'
+  },
+  {
+    name: 'Microsoft Excel',
+    imgSrc: excel,
+    altText: 'MS Excel Logo'
+  },
+];
+
 const webdevelopment = [
   {
     name: 'HTML',
@@ -174,29 +197,6 @@ const othertechnicalskills = [
     name: 'Microsoft 365',
     imgSrc: MS365,
     altText: 'Microsoft Office, Microsoft Word, Microsoft PowerPoint, Microsoft Excel'
-  },
-];
-
-const datascience = [
-  {
-    name: 'Python',
-    imgSrc: python,
-    altText: 'Python Logo'
-  },
-  {
-    name: 'PostgreSQL',
-    imgSrc: postgresql,
-    altText: 'PostgreSQL (SQL) Database Management System (DBMS)'
-  },
-  {
-    name: 'Natural Language Processing',
-    imgSrc: nlp,
-    altText: 'NLP Logo'
-  },
-  {
-    name: 'Microsoft Excel',
-    imgSrc: excel,
-    altText: 'MS Excel Logo'
   },
 ];
 
