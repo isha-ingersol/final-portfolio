@@ -11,18 +11,6 @@ import linkedin from "../assets/contact-images/linkedin-icon.png"
 import '../css-components/About.css'
 
 export const About = () => {
-    // Function to copy the phone number
-    const copyPhoneNumber = async () => {
-        const phoneNumber = "+971504054363";
-
-        try {
-        await navigator.clipboard.writeText(phoneNumber);
-        alert("Phone number copied to clipboard: " + phoneNumber);
-        } catch (error) {
-        console.error("Error copying phone number: " + error.message);
-        }
-    };
-
   return (
     <section className="about" id="about"> 
         <Container>
@@ -67,11 +55,11 @@ export const About = () => {
                 
         <div className="resume-button-container">
             <button className="resume-button" onClick={() => window.open(resume, '_blank')}>
-                FIND MY RESUME HERE!
+                FIND MY RESUME HERE
             </button>
         </div>
 
-        <br />
+        {/* <br />
 
         <div className="social-icon" style={{display: "flex", justifyContent: "center", alignItems: "center", width: "30%", margin: "auto"}}>
             <div className="email" style={{display: "flex", flexDirection: "column", alignItems: "center", paddingRight: "10%", paddingLeft: "10%"}}>
@@ -86,7 +74,7 @@ export const About = () => {
                 <a href="https://www.linkedin.com/in/isha-ingersol/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" /></a>
                 <h4>LinkedIn</h4>
             </div>
-        </div>
+        </div> */}
 
     </section>
   )

@@ -12,7 +12,7 @@
 /************ Footer Css ************/
 .footer {
     padding: 0 0 50px 0;
-    background: var(--background-color-2);
+    background-color: var(--background-color-1);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -9,8 +9,10 @@ import '../css-components/Contact.css';
 export const Contact = () => {
   return (
     <section className="contact" id="connect">
-      <div class="contact-content" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
-        <h2 class="heading">Get in Touch!</h2>
+      <div class="contact-content" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>        
+        
+        <h2> GET IN TOUCH NOW!</h2>
+
         <div className="social-icon" style={{display: "flex", justifyContent: "center", alignItems: "center", width: "30%", margin: "auto"}}>
             <div className="email" style={{display: "flex", flexDirection: "column", alignItems: "center", paddingRight: "10%", paddingLeft: "10%"}}>
                 <a href="mailto:ingersol.isha@gmail.com" target="_blank" rel="noopener noreferrer"><img src={mail} alt="Mail" /></a>

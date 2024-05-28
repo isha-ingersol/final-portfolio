@@ -35,7 +35,7 @@
 
 /************ About Me CSS ************/
 .about {
-  padding: 150px 0 50px 0;
+  padding: 100px 0 50px 0;
   position: relative;
   background-color: var(--background-color-2);
 }
@@ -101,7 +101,7 @@
 .about button {
   color: var(--text-color);
   border: 1px solid var(--accent-color-1);
-  padding: 15px 80px;
+  padding: 15px 85px;
   margin-top: 45px;
   position: relative;
   background-color: transparent;
