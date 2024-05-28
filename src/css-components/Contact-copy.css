@@ -1,0 +1,83 @@
+/************ Custom Colors CSS ************/
+:root {
+    --text-color: #301B11;
+    --background-color-1: #F6F2EE;
+    --background-color-2: #EFE7DF;
+    --main-accent-color: #CC907B;
+    --accent-color-1: #E5BCAD;
+    --accent-color-2: #E6D4C4;
+    --accent-color-3: #F6E0D6;
+}
+
+/************ Contact Me CSS ************/
+.contact {
+    /* background: linear-gradient(90.21deg, var(--background-color-1) -5.91%, #4A2FBD 111.58%); */
+    /* background: linear-gradient(90.21deg, var(--background-color-1) -5.91%, var(--accent-color-3) 111.58%); */
+    background: var(--background-color-1);
+    padding: 200px 0 200px 0;
+  }
+  .contact h2 {
+      font-size: 45px;
+      font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .contact h3 {
+      font-size: 30px;
+      font-weight: 500;
+    margin-bottom: 30px;
+  }
+  .contact h4 {
+      font-size: 25px;
+      font-weight: 500;
+    margin-top: 10%;
+  }
+  .contact span{
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .contact a {
+    width: 75px;
+    height: 75px;
+  }
+  
+  /* Add the background color for mobile devices */
+  @media (max-width: 600px) {
+    .contact .phone, .email, .linkedin, .twitter {
+      display: flex;
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0% !important;
+    }
+  
+    .contact .phone {
+      padding-right: 20% !important;
+    }
+    .contact .email {
+      padding-right: 24% !important;
+    }
+    .contact .linkedin {
+      padding-right: 7.25% !important;
+    }
+    .contact .twitter {
+      padding-right: 16% !important;
+    }
+  
+    .contact h4 {
+      font-size: 20px;
+      margin-top: 50% !important;
+    }
+    .contact .linkedin h4 {
+      font-size: 20px;
+      margin-top: 40% !important;
+    }
+  
+    .contact .social-icon {
+      display: flex;
+      flex-direction: column;
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+    }
+  }

@@ -101,8 +101,8 @@
 .about button {
   color: var(--text-color);
   border: 1px solid var(--accent-color-1);
-  padding: 18px 45px;
-  margin-left: 18px;
+  padding: 15px 80px;
+  margin-top: 45px;
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
@@ -110,7 +110,7 @@
   font-weight: 700;
   letter-spacing: 2.25px;
 
-  font-size: 12px;
+  font-size: 15px;
   font-family: 'CocoGothicBold', sans-serif;
 }
 .about button::before {
@@ -140,4 +140,13 @@
   }
 .resume-button {
   padding: 10px 20px;
+}
+
+.about h4 {
+  color: var(--text-color);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 10px 0 25px 0;
+  font-family: 'CatchyMager', sans-serif;
 }
