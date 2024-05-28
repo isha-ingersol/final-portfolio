@@ -150,3 +150,15 @@
   margin: 10px 0 25px 0;
   font-family: 'CatchyMager', sans-serif;
 }
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .col-left {
+    display: none; /* Hide the image on mobile devices */
+  }
+  .col-right {
+    width: 100%;
+  }
+}
