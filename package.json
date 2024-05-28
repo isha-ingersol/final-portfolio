@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ishaingersol.com",
+  "homepage": "https://isha-ingersol.github.io/final-portfolio",
   "name": "personal-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -30,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d final-portfolio",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
