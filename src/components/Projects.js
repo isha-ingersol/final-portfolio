@@ -2,8 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import threads from "../assets/img/project-threads-logo.png";
-import linkedin from "../assets/img/project-LinkedIn-logo.png";
-import maps from "../assets/img/project-maps-logo.svg";
 import upcomingweb from "../assets/img/upcoming-web-dev.png";
 import upcomingmobile from "../assets/img/upcoming-mobile-dev.png";
 import upcomingdatascience from "../assets/img/upcoming-datascience.png";
