@@ -88,7 +88,7 @@
   line-height: 1.5em;
   margin: 14px auto 75px auto;
   text-align: center;
-  width: 56%;
+  /* width: 56%; */
   
   justify-content: center;
 }
@@ -119,7 +119,8 @@
   .project p {
     text-align: left;
     width: 100%;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    text-align: center;
   }
 
   .project h3 {
