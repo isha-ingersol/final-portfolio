@@ -26,7 +26,7 @@
     border-radius: 70px;
     padding: 40px 40px 30px 40px;
 }
-.accordion-content.programming-languages {
+.accordion-content.programming-languages-and-databases {
     background: var(--background-color-1);
     border-radius: 64px;
     padding: 30px 10px 0px 10px;
@@ -37,7 +37,7 @@
     border-radius: 70px;
     padding: 40px 40px 30px 40px;
 }
-.accordion-content.data-science {
+.accordion-content.frameworks-and-libraries {
     background: var(--background-color-1);
     border-radius: 64px;
     padding: 30px 10px 0px 10px;
@@ -48,7 +48,7 @@
     border-radius: 70px;
     padding: 40px 40px 30px 40px;
 }
-.accordion-content.web-development {
+.accordion-content.full-stack-tools-and-platforms {
     background: var(--background-color-1);
     border-radius: 64px;
     padding: 30px 10px 0px 10px;
@@ -59,7 +59,7 @@
     border-radius: 70px;
     padding: 40px 40px 30px 40px;
 }
-.accordion-content.ai-ml {
+.accordion-content.concepts-and-practices {
     background: var(--background-color-1);
     border-radius: 64px;
     padding: 30px 10px 0px 10px;
@@ -71,7 +71,7 @@
     /* padding: 10px 10px; */
     padding: 40px 40px 30px 40px;
 }
-.accordion-content.other-technical-skills {
+.accordion-content.data-skills {
     background: var(--background-color-1);
     border-radius: 64px;
     padding: 30px 10px 0px 10px;

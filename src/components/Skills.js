@@ -40,7 +40,7 @@ import excel from "../assets/logos/microsoft-excel-icon.svg";
 import { Type } from 'react-bootstrap-icons';
 import '../css-components/Skills.css';
 
-const programminglanguages = [
+const programminglanguagesanddatabases = [
   {
     name: 'Java',
     imgSrc: java,
@@ -52,60 +52,9 @@ const programminglanguages = [
     altText: 'Python Logo'
   },
   {
-    name: 'C',
-    imgSrc: C,
-    altText: 'C (Programming Language)'
-  },
-  {
-    name: 'C++',
-    imgSrc: CPlusPlus,
-    altText: 'C++ (Programming Language)'
-  },
-  {
-    name: 'PostgreSQL',
-    imgSrc: postgresql,
-    altText: 'PostgreSQL (SQL) Database Management System (DBMS)'
-  },
-  {
-    name: 'Haskell',
-    imgSrc: Haskell,
-    altText: 'Haskell (Programming Language)'
-  },
-];
-
-const datascience = [
-  {
-    name: 'Python',
-    imgSrc: python,
-    altText: 'Python Logo'
-  },
-  {
-    name: 'PostgreSQL',
-    imgSrc: postgresql,
-    altText: 'PostgreSQL (SQL) Database Management System (DBMS)'
-  },
-  {
-    name: 'Natural Language Processing',
-    imgSrc: nlp,
-    altText: 'NLP Logo'
-  },
-  {
-    name: 'Microsoft Excel',
-    imgSrc: excel,
-    altText: 'MS Excel Logo'
-  },
-];
-
-const webdevelopment = [
-  {
-    name: 'HTML',
-    imgSrc: HTML,
-    altText: 'HTML'
-  },
-  {
-    name: 'CSS',
-    imgSrc: CSS,
-    altText: 'CSS'
+    name: 'TypeScript',
+    imgSrc: TypeScript,
+    altText: 'TypeScript'
   },
   {
     name: 'JavaScript',
@@ -113,15 +62,66 @@ const webdevelopment = [
     altText: 'JavaScript'
   },
   {
-    name: 'TypeScript',
-    imgSrc: TypeScript,
-    altText: 'TypeScript'
+    name: 'PostgreSQL',
+    imgSrc: postgresql,
+    altText: 'PostgreSQL (SQL) Database Management System (DBMS)'
   },
   {
-    name: 'AngularJS',
-    imgSrc: Angular,
-    altText: 'AngularJS/Angular.JS'
+    name: 'MongoDB',
+    imgSrc: mongodb,
+    altText: 'MongoDB DBMS'
   },
+  // {
+  //   name: 'C',
+  //   imgSrc: C,
+  //   altText: 'C (Programming Language)'
+  // },
+  // {
+  //   name: 'C++',
+  //   imgSrc: CPlusPlus,
+  //   altText: 'C++ (Programming Language)'
+  // },
+  // {
+  //   name: 'Haskell',
+  //   imgSrc: Haskell,
+  //   altText: 'Haskell (Programming Language)'
+  // },
+];
+
+const frameworksAndLibraries = [
+  {
+    name: 'TensorFlow',
+    imgSrc: TensorFlow,
+    altText: 'TensorFlow'
+  },
+  {
+    name: 'PyTorch',
+    imgSrc: PyTorch,
+    altText: 'PyTorch'
+  },
+  {
+    name: 'Keras [CHANGE LOGO]',
+    imgSrc: Agile,
+    altText: 'Keras'
+  },
+  {
+    name: 'Scikit-learn [CHANGE LOGO]',
+    imgSrc: MS365,
+    altText: 'Scikit-learn'
+  },
+  {
+    name: 'NumPy [CHANGE LOGO]',
+    imgSrc: MS365,
+    altText: 'NumPy'
+  },
+  {
+    name: 'Pandas [CHANGE LOGO]',
+    imgSrc: MS365,
+    altText: 'Pandas'
+  },
+];
+
+const fullStackToolsAndPlatforms = [
   {
     name: 'ReactJS',
     imgSrc: ReactJS,
@@ -143,50 +143,68 @@ const webdevelopment = [
     altText: 'TailwindCSS'
   },
   {
-    name: 'MongoDB',
-    imgSrc: mongodb,
-    altText: 'MongoDB DBMS'
-  },
-//   {
-//     name: 'APIs',
-//     imgSrc: APIs,
-//     altText: 'APIs for Web Development'
-//   },
-  {
-    name: 'WordPress',
-    imgSrc: WordPress,
-    altText: 'Wordpress (No Code Web Development)'
-  },
-  {
     name: 'Figma',
     imgSrc: Figma,
     altText: 'Figma (No Code Web Development)'
   },
-];
-
-const aiml = [
   {
-    name: 'PyTorch',
-    imgSrc: PyTorch,
-    altText: 'PyTorch'
+    name: 'Postman [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Postman'
   },
   {
-    name: 'TensorFlow',
-    imgSrc: TensorFlow,
-    altText: 'TensorFlow'
+    name: 'Docker [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Docker'
   },
-];
-
-const othertechnicalskills = [
   {
     name: 'Git',
     imgSrc: Git,
     altText: 'Git (GitHub an GitLab)'
   },
+
+  // {
+  //   name: 'APIs',
+  //   imgSrc: APIs,
+  //   altText: 'APIs for Web Development'
+  // },
+  // {
+  //   name: 'HTML',
+  //   imgSrc: HTML,
+  //   altText: 'HTML'
+  // },
+  // {
+  //   name: 'CSS',
+  //   imgSrc: CSS,
+  //   altText: 'CSS'
+  // },
+  // {
+  //   name: 'JavaScript',
+  //   imgSrc: JavaScript,
+  //   altText: 'JavaScript'
+  // },
+  // {
+  //   name: 'AngularJS',
+  //   imgSrc: Angular,
+  //   altText: 'AngularJS/Angular.JS'
+  // },
+  // {
+  //   name: 'WordPress',
+  //   imgSrc: WordPress,
+  //   altText: 'Wordpress (No Code Web Development)'
+  // },
+];
+
+const conceptsAndPractices = [
   {
-    name: 'Scratch',
-    imgSrc: Scratch,
-    altText: 'Scratch (by MIT)'
+    name: 'Machine Learning/Artificial Intelligence',
+    imgSrc: nlp,
+    altText: 'Machine Learning/AI'
+  },
+  {
+    name: 'Computer Vision [CHANGE LOGO]',
+    imgSrc: TensorFlow,
+    altText: 'Computer Vision'
   },
   {
     name: 'Agile Development',
@@ -194,19 +212,52 @@ const othertechnicalskills = [
     altText: 'Agile Development (Project Management, Product Management)'
   },
   {
-    name: 'Microsoft 365',
-    imgSrc: MS365,
-    altText: 'Microsoft Office, Microsoft Word, Microsoft PowerPoint, Microsoft Excel'
+    name: 'CI/CD [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'CI/CD'
+  },
+  {
+    name: 'Cloud Computing [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Clound Computing'
+  },
+];
+
+const dataSkills = [
+  {
+    name: 'Data Analysis [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Data Analysis'
+  },
+  {
+    name: 'Business Analytics [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Business Analytics'
+  },
+  {
+    name: 'Tableau [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Tableau'
+  },
+  {
+    name: 'PowerBI [CHANGE LOGO]',
+    imgSrc: Git,
+    altText: 'Power BI'
+  },
+  {
+    name: 'Advanced MS Excel',
+    imgSrc: excel,
+    altText: 'MS Excel Logo'
   },
 ];
 
 const Skills = () => {
 
-  const programminglanguagessettings = { itemsPerRow: 6, }
-  const webdevelopmentsettings = { itemsPerRow: 6, }
-  const aimlsettings = { itemsPerRow: 6, }
-  const othertechnicalskillssettings = { itemsPerRow: 6, }
-  const datasciencesettings = { itemsPerRow: 6, }
+  const programmingLanguagesAndDatabasesSettings = { itemsPerRow: 6, }
+  const frameworksAndLibrariesSettings = { itemsPerRow: 6, }
+  const fullStackToolsAndPlatformsSettings = { itemsPerRow: 6, }
+  const conceptsAndPracticesSettings = { itemsPerRow: 6, }
+  const dataSkillsSettings = { itemsPerRow: 6, }
 
   // Define the createRows function
 function createRows(items, settings) {
@@ -226,13 +277,12 @@ function createRows(items, settings) {
               <p style={{ marginTop: "10px", textAlign: "center"}}>Over the years, I have developed a <span>unique skillset</span>, which I have mentioned in categories below.</p>
               
               <div class="accordion">
-                <div class="box1">
-                  <div class="accordion-title programming-languages"><h4 style={{textAlign: "center"}}>All Programming Languages</h4></div>
-                  <div class="accordion-content programming-languages" {...programminglanguagessettings}>
-                    {createRows(programminglanguages, programminglanguagessettings).map((row, rowIndex) => (
+                  <div class="accordion-content programming-languages-and-databases" {...programmingLanguagesAndDatabasesSettings}>
+                  <div class="accordion-title programming-languages-and-databases"><h4 style={{textAlign: "center"}}>Programming Languages</h4></div>
+                    {createRows(programminglanguagesanddatabases, programmingLanguagesAndDatabasesSettings).map((row, rowIndex) => (
                       <div key={rowIndex} className="row">
                         {row.map((skill, itemIndex) => (
-                          <div key={itemIndex} className={`col-md-${12 / programminglanguagessettings.itemsPerRow}`}>
+                          <div key={itemIndex} className={`col-md-${12 / programmingLanguagesAndDatabasesSettings.itemsPerRow}`}>
                             <div className="item" style={{ marginBottom: "25px", display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center" }}>
                               <img src={skill.imgSrc} alt={skill.name} style={{ maxWidth: "150px", padding: "10px" }} />
                               <div className="skill-name" style={{display: "grid", alignContent:"center", justifyContent:"center", marginTop:"0%"}}>{skill.name}</div>
@@ -242,18 +292,15 @@ function createRows(items, settings) {
                       </div> 
                     ))}
                   </div>
-                </div>
                 
                 <br></br>
 
-                <div class="box2">
-                  {/* <div class="accordion-title data-science"><span>Data Science Skills</span></div> */}
-                  <div class="accordion-title data-science"><h4 style={{textAlign: "center"}}>Data Science Skills</h4></div>
-                  <div class="accordion-content data-science" {...datasciencesettings}>
-                    {createRows(datascience, datasciencesettings).map((row, rowIndex) => (
+                <div class="accordion-content frameworks-and-libraries" {...frameworksAndLibrariesSettings}>
+                <div class="accordion-title frameworks-and-libraries"><h4 style={{textAlign: "center"}}>Frameworks and Libraries</h4></div>
+                    {createRows(frameworksAndLibraries, frameworksAndLibrariesSettings).map((row, rowIndex) => (
                       <div key={rowIndex} className="row">
                         {row.map((skill, itemIndex) => (
-                          <div key={itemIndex} className={`col-md-${12 / datasciencesettings.itemsPerRow}`}>
+                          <div key={itemIndex} className={`col-md-${12 / frameworksAndLibrariesSettings.itemsPerRow}`}>
                             <div className="item" style={{ marginBottom: "50px", display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center" }}>
                               <img src={skill.imgSrc} alt={skill.name} style={{ maxWidth: "150px", padding: "10px" }} />
                               <div className="skill-name" style={{display: "grid", alignContent:"center", justifyContent:"center", marginTop:"1%"}}>{skill.name}</div>
@@ -262,18 +309,16 @@ function createRows(items, settings) {
                         ))}
                       </div> 
                     ))}
-                  </div>
                 </div>
                   
                 <br></br>
 
-                <div class="box3">
-                  <div class="accordion-title"><h4 style={{textAlign: "center"}}>Web Development Skills</h4></div>
-                  <div class="accordion-content web-development" {...webdevelopmentsettings}>
-                    {createRows(webdevelopment, webdevelopmentsettings).map((row, rowIndex) => (
+                <div class="accordion-content full-stack-tools-and-platforms" {...fullStackToolsAndPlatformsSettings}>
+                <div class="accordion-title full-stack-tools-and-platforms"><h4 style={{textAlign: "center"}}>Full Stack Tools and Platforms</h4></div>
+                    {createRows(fullStackToolsAndPlatforms, fullStackToolsAndPlatformsSettings).map((row, rowIndex) => (
                       <div key={rowIndex} className="row">
                         {row.map((skill, itemIndex) => (
-                          <div key={itemIndex} className={`col-md-${12 / webdevelopmentsettings.itemsPerRow}`}>
+                          <div key={itemIndex} className={`col-md-${12 / fullStackToolsAndPlatformsSettings.itemsPerRow}`}>
                             <div className="item" style={{ marginBottom: "50px", display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center" }}>
                               <img src={skill.imgSrc} alt={skill.name} style={{ maxWidth: "150px", padding: "10px" }} />
                               <div className="skill-name">{skill.name}</div>
@@ -282,18 +327,16 @@ function createRows(items, settings) {
                         ))}
                       </div> 
                     ))}
-                  </div>
                 </div>
 
                 <br></br>
 
-                <div class="box4">
-                  <div class="accordion-title"><h4 style={{textAlign: "center"}}>AI/ML Skills</h4></div>
-                  <div class="accordion-content ai-ml" {...aimlsettings}>
-                    {createRows(aiml, aimlsettings).map((row, rowIndex) => (
+                <div class="accordion-content concepts-and-practices" {...conceptsAndPracticesSettings}>
+                <div class="accordion-title concepts-and-practices"><h4 style={{textAlign: "center"}}>Concepts and Practices</h4></div>
+                    {createRows(conceptsAndPractices, conceptsAndPracticesSettings).map((row, rowIndex) => (
                       <div key={rowIndex} className="row">
                         {row.map((skill, itemIndex) => (
-                          <div key={itemIndex} className={`col-md-${12 / aimlsettings.itemsPerRow}`}>
+                          <div key={itemIndex} className={`col-md-${12 / conceptsAndPracticesSettings.itemsPerRow}`}>
                             <div className="item" style={{ marginBottom: "50px", display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center" }}>
                               <img src={skill.imgSrc} alt={skill.name} style={{ maxWidth: "150px", padding: "10px" }} />
                               <div className="skill-name">{skill.name}</div>
@@ -302,18 +345,16 @@ function createRows(items, settings) {
                         ))}
                       </div> 
                     ))}
-                  </div>
                 </div>
 
                 <br></br>
 
-                <div class="box5">
-                  <div class="accordion-title"><h4 style={{textAlign: "center"}}>Other Technical Skills</h4></div>
-                  <div class="accordion-content other-technical-skills" {...othertechnicalskillssettings}>
-                    {createRows(othertechnicalskills, othertechnicalskillssettings).map((row, rowIndex) => (
+                <div class="accordion-content data-skills" {...dataSkillsSettings}>
+                <div class="accordion-title data-skills"><h4 style={{textAlign: "center"}}>Data Skills</h4></div>
+                    {createRows(dataSkills, dataSkillsSettings).map((row, rowIndex) => (
                       <div key={rowIndex} className="row">
                         {row.map((skill, itemIndex) => (
-                          <div key={itemIndex} className={`col-md-${12 / othertechnicalskillssettings.itemsPerRow}`}>
+                          <div key={itemIndex} className={`col-md-${12 / dataSkillsSettings.itemsPerRow}`}>
                             <div className="item" style={{ marginBottom: "50px", display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center" }}>
                               <img src={skill.imgSrc} alt={skill.name} style={{ maxWidth: "150px", padding: "10px" }} />
                               <div className="skill-name">{skill.name}</div>
@@ -322,7 +363,6 @@ function createRows(items, settings) {
                         ))}
                       </div> 
                     ))}
-                  </div> 
                 </div>
               </div>
           </div>
