@@ -80,11 +80,6 @@
     /* opacity: 0.5; */
   }
   
-  /* Fix spelling and alignment */
-  .skills-carousel {
-    scroll-behavior: smooth;
-  }
-  
   /* .skills-carousel-container {
     background-color: var(--background-color-2);
   } */
