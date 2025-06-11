@@ -1,0 +1,91 @@
+.skills-carousel-container {
+    position: relative;
+  }
+  
+  .skills-carousel {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .skill-item {
+    flex: 0 0 calc((100% / 6) - 0.8rem);
+    max-width: calc((100% / 6) - 0.8rem);
+    max-height: 15rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* background-color: green; */
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .skill-item img {
+    max-width: 80%;
+    height: 75%;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  
+  .skill-name {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.4em;
+    margin: 0;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-weight: normal; /* keep as normal, no bold */
+    color: var(--text-color);
+  }
+  
+  /* Buttons container aligned left */
+  .skills-carousel-buttons {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start; /* left align buttons */
+    padding-left: 2%;
+
+    padding-bottom: 2%;
+  }
+  
+  /* Buttons */
+  .skills-carousel-button {
+    background: var(--accent-color-3);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hover state */
+  .skills-carousel-button:hover:not(:disabled) {
+    background-color: var(--accent-color-1);
+  }
+  
+  /* Disabled button styles */
+  .skills-carousel-button:disabled {
+    background-color: var(--accent-color-3);
+    cursor: default;
+    /* opacity: 0.5; */
+  }
+  
+  /* Fix spelling and alignment */
+  .skills-carousel {
+    scroll-behavior: smooth;
+  }
+  
+  /* .skills-carousel-container {
+    background-color: var(--background-color-2);
+  } */
+  

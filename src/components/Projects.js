@@ -40,24 +40,6 @@ export const Projects = () => {
             <div className="project-bx-all">
               <ProjectsCarousel projects={projectsAll} />
             </div>
-
-            {/* <div className="project-bx-webdev">
-              <h3>Web App Development</h3>
-              <br />
-              <ProjectsCarousel projects={projectsWebDev} />
-            </div>
-
-            <div className="project-bx-mobiledev">
-              <h3>Mobile App Development</h3>
-              <br />
-              <ProjectsCarousel projects={projectsMobileDev} />
-            </div>
-
-            <div className="project-bx-datascience">
-              <h3>Data Science Projects</h3>
-              <br />
-              <ProjectsCarousel projects={projectsDataScience} />
-            </div> */}
           </Col>
         </Row>
       </Container>
