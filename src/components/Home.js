@@ -81,6 +81,8 @@ export const Home = () => {
               <span>FIND MY RESUME HERE!</span>
             </button>
           </div>
+
+          SCROLL FOR MORE: BOUNCY DOWN ARROW
         </Row>
       </Container>
     </section>

@@ -43,7 +43,7 @@
 }
 
 .project-bx-webdev {
-  background-color: var(--accent-color-1);
+  /* background-color: var(--accent-color-1); */
   border-radius: 64px;
   text-align: center;
   padding: 40px 50px 20px 50px;
@@ -51,7 +51,7 @@
 }
 
 .project-bx-mobiledev {
-  background-color: var(--accent-color-2);
+  /* background-color: var(--accent-color-2); */
   border-radius: 64px;
   text-align: center;
   padding: 40px 50px 20px 50px;
@@ -59,7 +59,7 @@
 }
 
 .project-bx-datascience {
-  background-color: var(--accent-color-3);
+  /* background-color: var(--accent-color-3); */
   border-radius: 64px;
   text-align: center;
   padding: 40px 50px 20px 50px;
@@ -67,7 +67,7 @@
 }
   
 .project {
-  padding: 100px 0 100px 0;
+  padding: 75px 0 50px 0;
   position: relative;
   background-color: var(--background-color-1);
   background-size: cover;
@@ -86,7 +86,7 @@
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px auto 75px auto;
+  margin: 14px auto 25px auto;
   text-align: center;
   /* width: 56%; */
   

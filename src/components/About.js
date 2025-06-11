@@ -25,7 +25,7 @@ export const About = () => {
 
                         <div className="col-right">
                             <p>
-                                I am <span>Isha Ingersol</span>, a 20-year-old based in Dubai, United Arab Emirates.
+                                I am <span>Isha Ingersol</span>, a graduate professional in United Kingdom.
                                 <br></br>
                                 <br></br>
                                 As an undergraduate, I have taken up leadership roles at the university as the:
