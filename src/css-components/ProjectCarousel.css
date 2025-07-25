@@ -1,93 +1,459 @@
+/************ Custom Colors CSS ************/
+:root {
+  --text-color: #301B11;
+  --background-color-1: #F6F2EE;
+  --background-color-2: #EFE7DF;
+  --main-accent-color: #CC907B;
+  --accent-color-1: #E5BCAD;
+  --accent-color-2: #E6D4C4;
+  --accent-color-3: #F6E0D6;
+  --white-alt: #FCFAF7;
+}
+
+@font-face {
+  font-family: CatchyMager;
+  src: url('../assets/font/CatchyMagerRegular.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: CocoGothicBold;
+  src: url('../assets/font/CocoGothicBold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: CocoGothicRegular;
+  src: url('../assets/font/CocoGothicRegular.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: PlayfairDisplayRegular;
+  src: url('../assets/font/PlayfairDisplayRegular.ttf');
+  font-weight: 700;
+}
+
+/************ Carousel Wrapper ************/
 .carousel-wrapper {
-    padding: 2rem 1rem;
-  }
-  
-  .carousel-heading {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary, #ffffff);
-  }
-  
-  .carousel-container {
-    position: relative;
-    overflow: hidden;
-  }
-  
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: visible;
+  max-width: 100%;
+}
+
+/************ Carousel Track ************/
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0 2rem 0;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/************ Carousel Cards ************/
+.carousel-container .carousel-card {
+  flex: 0 0 350px;
+  min-width: 350px;
+  max-width: 400px;
+  background-color: var(--white-alt);
+  border: 1px solid var(--accent-color-2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(48, 27, 17, 0.1), 0 1px 3px rgba(48, 27, 17, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 550px;
+}
+
+.carousel-container .carousel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(48, 27, 17, 0.15), 0 4px 10px rgba(48, 27, 17, 0.1);
+}
+
+/************ Card Header ************/
+.carousel-container .carousel-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent-color-3);
+}
+
+.carousel-container .project-date {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.carousel-container .project-status {
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+}
+
+.carousel-container .project-status.completed {
+  background-color: var(--accent-color-3);
+  color: var(--text-color);
+}
+
+.carousel-container .project-status.in-development {
+  background-color: var(--main-accent-color);
+  color: var(--white-alt);
+}
+
+.carousel-container .project-status.planned {
+  background-color: var(--main-accent-color);
+  color: var(--white-alt);
+}
+
+/************ Card Content ************/
+.carousel-container .carousel-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.carousel-container .carousel-card-content img {
+  transition: transform 0.3s ease;
+  max-width: 40%;
+  margin-top: -1rem;
+}
+
+.carousel-container .carousel-card-content h3 {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  line-height: 0.5;
+  margin-top: -1rem;
+}
+
+.carousel-container .carousel-card-content p {
+  /* text-align: left; */
+  width: 100%;
+  color: var(--text-color);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Helvetica Neue";
+  opacity: 0.8;
+}
+
+/************ Tags Section ************/
+.carousel-container .project-tags-section {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--accent-color-3);
+  color: var(--background-color-1);
+}
+
+.carousel-container .tag-group {
+  margin-bottom: 1rem;
+}
+
+.carousel-container .tag-group:last-child {
+  margin-bottom: 0;
+}
+
+.carousel-container .tag-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  /* color: var(--text-color); */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  opacity: 0.7;
+}
+
+.carousel-container .tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.carousel-container .tag {
+  padding: 0.5rem 0.75rem;
+  background: var(--accent-color-3);
+  color: var(--text-color);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--accent-color-3);
+  transition: all 0.2s ease;
+}
+
+.carousel-container .tag:hover {
+  box-shadow: 0 2px 4px rgba(48, 27, 17, 0.1);
+}
+
+/* Category Tags - Similar to education tag in Experience */
+.carousel-container .category-tag {
+  background-color: var(--background-color-1);
+  color: var(--text-color);
+  border-color: var(--accent-color-3);
+}
+
+.carousel-container .category-tag:hover {
+  background-color: var(--accent-color-3);
+  color: var(--text-color);
+  border-color: var(--accent-color-3);
+}
+
+/* Technology Tags - Similar to skill tags in Experience */
+.carousel-container .technology-tag {
+  background-color: var(--accent-color-3);
+  color: var(--text-color);
+  border-color: var(--accent-color-3);
+}
+
+.carousel-container .technology-tag:hover {
+  background-color: var(--background-color-1);
+  border-color: var(--accent-color-1);
+}
+
+/************ Card Actions ************/
+.carousel-container .carousel-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.carousel-container .carousel-card-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-align: center;
+  min-width: 110px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.carousel-container .carousel-card-button.primary {
+  background-color: var(--main-accent-color);
+  color: var(--background-color-1);
+  border: 2px solid var(--main-accent-color);
+  text-align: center;
+}
+
+.carousel-container .carousel-card-button.primary:hover {
+  background-color: var(--background-color-1);
+  color: var(--text-color);
+  border-color: var(--main-accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(204, 144, 123, 0.3);
+}
+
+.carousel-container .carousel-card-button.secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--main-accent-color);
+  text-align: center;
+}
+
+.carousel-container .carousel-card-button.secondary:hover {
+  background-color: var(--main-accent-color);
+  color: var(--background-color-1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(204, 144, 123, 0.3);
+}
+
+/************ Carousel Controls ************/
+.carousel-container .carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.carousel-container .carousel-button {
+  background: var(--background-color-1);
+  border: 2px solid var(--main-accent-color);
+  border-radius: 50%;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(48, 27, 17, 0.1);
+}
+
+.carousel-container .carousel-button:hover:not(:disabled) {
+  background-color: var(--main-accent-color);
+  color: var(--white-alt);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(204, 144, 123, 0.3);
+}
+
+.carousel-container .carousel-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  background-color: var(--accent-color-3);
+  border-color: var(--accent-color-2);
+}
+
+/************ Mobile Styles (Phone) ************/
+@media (max-width: 480px) {
   .carousel-track {
-    display: flex;
     gap: 1rem;
-    overflow-x: auto;
-    scroll-behavior: smooth; /* corrected spelling from 'behaviour' */
-    padding-bottom: 1rem;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory; /* Optional: adds nice snapping */
-  }
-  
-  .carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    padding: 0.5rem 0 1.5rem 0;
   }
   
   .carousel-card {
-    flex: 0 0 80%;
+    flex: 0 0 280px;
+    min-width: 280px;
     max-width: 300px;
-    background-color: var(--accent-color-3);
-    border-radius: 1rem;
     padding: 1rem;
-    scroll-snap-align: start;
-    transition: transform 0.3s ease;
+    min-height: 500px;
   }
   
-  /* .carousel-card:hover {
-    transform: scale(1.03);
-  } */
-
-  .carousel-card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* centre horizontally */
-    text-align: center;   /* default text alignment for heading and image */
-    padding-top: 5%;
+  .carousel-card-content h3 {
+    font-size: 1.125rem;
   }
   
   .carousel-card-content p {
-    text-align: left;    /* override paragraph text to be left aligned */
-    width: 100%;         /* so left alignment works nicely inside the centred block */
+    font-size: 0.875rem;
   }
   
-  
-  .carousel-card-button {
-    background-color: var(--button-background, #a8d8f0);
-    colour: var(--button-text, #000000);
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-colour 0.3s ease;
-  }
-  
-  .carousel-card-button:hover {
-    background-colour: var(--accent-color-1);
-  }
-  
-  .carousel-controls {
-    display: flex;
-    justify-content: centre;
+  .carousel-card-actions {
+    flex-direction: column;
     gap: 0.5rem;
   }
   
+  .carousel-card-button {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .tags-container {
+    gap: 0.375rem;
+  }
+  
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .carousel-controls {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  
   .carousel-button {
-    background: var(--accent-color-3);
-    border: none;
-    border-radius: 50%;
-    padding: 0.5rem 0.75rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-    colour: var(--button-text, #000000);
-    transition: background-colour 0.3s ease;
+    width: 45px;
+    height: 45px;
+    font-size: 1.125rem;
+  }
+}
+
+/************ Tablet Styles ************/
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel-container .carousel-track {
+    gap: 1.25rem;
   }
   
-  .carousel-button:hover {
-    background-colour: var(--accent-color-1);
+  .carousel-container .carousel-card {
+    flex: 0 0 320px;
+    min-width: 320px;
+    max-width: 350px;
+    min-height: 520px;
   }
   
+  .carousel-container .carousel-card-actions {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  .carousel-container .carousel-card-button {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+  }
+}
+
+/************ Large Tablet/Small Desktop ************/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel-container .carousel-card {
+    flex: 0 0 340px;
+    min-width: 340px;
+    max-width: 380px;
+  }
+}
+
+/************ Large Desktop ************/
+@media (min-width: 1025px) {
+  .carousel-container .carousel-wrapper {
+    padding: 2.5rem 0;
+  }
+  
+  .carousel-container .carousel-track {
+    gap: 2rem;
+  }
+  
+  .carousel-container .carousel-card {
+    flex: 0 0 360px;
+    min-width: 360px;
+    max-width: 400px;
+    padding: 2rem;
+    min-height: 580px;
+  }
+  
+  .carousel-container .carousel-controls {
+    margin-top: 2.5rem;
+  }
+  
+  .carousel-container .carousel-button {
+    width: 55px;
+    height: 55px;
+    font-size: 1.375rem;
+  }
+}

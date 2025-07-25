@@ -7,6 +7,7 @@
     --accent-color-1: #E5BCAD;
     --accent-color-2: #E6D4C4;
     --accent-color-3: #F6E0D6;
+    --white-alt: #FCFAF7;
 }
 
 @font-face {
@@ -33,44 +34,13 @@
 	font-weight: 700;
 }
 
-/************ Projects CSS ************/
-.project-bx {
-    background-color: var(--background-color-1);
-    border-radius: 64px;
-    text-align: center;
-    padding: 60px 50px;
-    margin-top: 50px;
-}
-
-.project-bx-webdev {
-  /* background-color: var(--accent-color-1); */
-  border-radius: 64px;
-  text-align: center;
-  padding: 40px 50px 20px 50px;
-  margin-top: 50px;
-}
-
-.project-bx-mobiledev {
-  /* background-color: var(--accent-color-2); */
-  border-radius: 64px;
-  text-align: center;
-  padding: 40px 50px 20px 50px;
-  margin-top: 50px;
-}
-
-.project-bx-datascience {
-  /* background-color: var(--accent-color-3); */
-  border-radius: 64px;
-  text-align: center;
-  padding: 40px 50px 20px 50px;
-  margin-top: 50px;
-}
-  
+/************ Projects Main Section ************/
 .project {
-  padding: 75px 0 50px 0;
+  padding: 80px 0 60px 0;
   position: relative;
   background-color: var(--background-color-1);
   background-size: cover;
+  min-height: 100vh;
 }
 
 .project h2 {
@@ -78,57 +48,213 @@
   font-size: 35px;
   font-weight: 700;
   letter-spacing: 7.5px;
-  font-family: 'CocoGothicBold', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
 .project p {
   color: var(--text-color);
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 25px auto;
   text-align: center;
-  /* width: 56%; */
-  
-  justify-content: center;
+  /* max-width: 800px; */
 }
 
-.project span{
-  color: var(--accent-dark);
-  font-weight: bold;
-  font-style: italic;
+.project span {
+  color: var(--main-accent-color);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/************ Project Container ************/
+.project-bx-all {
+  margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/************ Legacy Project Box Styles (kept for compatibility) ************/
+.project-bx {
+    background-color: var(--white-alt);
+    border-radius: 2rem;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: 50px;
+    border: 2px solid var(--accent-color-2);
+    transition: all 0.3s ease;
+}
+
+.project-bx:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(48, 27, 17, 0.15);
+    border-color: var(--main-accent-color);
+}
+
+.project-bx-webdev {
+  background-color: var(--white-alt);
+  border: 2px solid var(--accent-color-1);
+  border-radius: 2rem;
+  text-align: center;
+  padding: 40px 50px 20px 50px;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.project-bx-webdev:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(229, 188, 173, 0.3);
+    border-color: var(--main-accent-color);
+}
+
+.project-bx-mobiledev {
+  background-color: var(--white-alt);
+  border: 2px solid var(--accent-color-2);
+  border-radius: 2rem;
+  text-align: center;
+  padding: 40px 50px 20px 50px;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.project-bx-mobiledev:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(230, 212, 196, 0.3);
+    border-color: var(--main-accent-color);
+}
+
+.project-bx-datascience {
+  background-color: var(--white-alt);
+  border: 2px solid var(--accent-color-3);
+  border-radius: 2rem;
+  text-align: center;
+  padding: 40px 50px 20px 50px;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.project-bx-datascience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(246, 224, 214, 0.3);
+    border-color: var(--main-accent-color);
 }
 
 .project h3 {
   text-align: left;
-  /* font-weight: 700; */
   letter-spacing: 0.8px;
-  line-height: 1;
+  line-height: 1.2;
   display: block;
-
   font-size: 30px;
-  font-family: 'CatchyMager', sans-serif;
-  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  font-weight: 600;
   margin-left: 10px;
   margin-top: 10px;
+  color: var(--text-color);
 }
 
+/************ Mobile Styles (Phone) ************/
+@media (max-width: 480px) {
+  .project {
+    padding: 60px 0 40px 0;
+  }
 
-/************ Projects CSS (for mobile devices) ************/
-@media (max-width: 767px) {
+  .project h2 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
   .project p {
-    width: 100%;
+    width: 95%;
     text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 12px auto 20px auto;
   }
 
   .project h3 {
     text-align: center;
+    font-size: 24px;
+    margin-left: 0;
   }
 
+  .project-bx,
   .project-bx-webdev,
   .project-bx-mobiledev,
   .project-bx-datascience {
-    padding: 20px 10px;
+    padding: 30px 15px;
     margin-bottom: 20px;
+    border-radius: 1.5rem;
+  }
+
+  .project-bx-all {
+    margin-top: 1rem;
+  }
+}
+
+/************ Tablet Styles ************/
+@media (min-width: 481px) and (max-width: 768px) {
+  .project {
+    padding: 70px 0 50px 0;
+  }
+
+  .project h2 {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  .project p {
+    width: 90%;
+    font-size: 17px;
+    letter-spacing: 0.6px;
+  }
+
+  .project h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-left: 0;
+  }
+
+  .project-bx,
+  .project-bx-webdev,
+  .project-bx-mobiledev,
+  .project-bx-datascience {
+    padding: 35px 25px;
+    margin-bottom: 25px;
+  }
+}
+
+/************ Large Tablet/Small Desktop ************/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project {
+    padding: 75px 0 55px 0;
+  }
+
+  .project p {
+    width: 80%;
+  }
+}
+
+/************ Large Desktop ************/
+@media (min-width: 1025px) {
+  .project {
+    padding: 90px 0 70px 0;
+  }
+
+  .project h2 {
+    font-size: 40px;
+    letter-spacing: 8px;
+  }
+
+  .project p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.6em;
+    margin: 16px auto 35px auto;
+  }
+
+  .project-bx-all {
+    margin-top: 2.5rem;
   }
 }

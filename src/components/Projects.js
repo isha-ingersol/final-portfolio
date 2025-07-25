@@ -8,27 +8,79 @@ import '../css-components/Projects.css';
 export const Projects = () => {
   const projectsAll = [
     {
+      id: 1,
       title: "Threads Clone",
-      description: (
-        <>
-          Under Development. <br />
-          Technologies Used: <br />
-          TailwindCSS, NextJS, Clerk, <br />
-          TypeScript, and more.
-        </>
-      ),
+      description: "A full-stack social media application clone with real-time features, user authentication, and modern UI design. Features include post creation, commenting, following system, and responsive design.",
       imgUrl: threads,
       imgWidth: "180px",
       imgHeight: "180px",
+      date: "2024-03-15", // ISO format for easy sorting
+      link: "https://github.com/yourusername/threads-clone",
+      demoLink: "https://threads-clone-demo.vercel.app",
+      status: "In Development",
+      technologies: ["NextJS", "TypeScript", "TailwindCSS", "Clerk", "MongoDB", "Vercel"],
+      categories: ["Web Development", "Full Stack"]
     },
     {
-      title: "Upcoming Project",
-      description: "Under Development",
+      id: 2,
+      title: "AI Data Analysis Tool",
+      description: "Machine learning powered data analysis platform that provides automated insights, visualizations, and predictive analytics for business data.",
       imgUrl: upcomingproject,
       imgWidth: "180px",
       imgHeight: "180px",
+      date: "2024-01-20",
+      link: "https://github.com/yourusername/ai-data-tool",
+      demoLink: null,
+      status: "Completed",
+      technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "Plotly"],
+      categories: ["AI", "Data Science", "Data Analysis"]
     },
+    {
+      id: 3,
+      title: "E-Commerce Platform",
+      description: "Modern e-commerce solution with payment integration, inventory management, and admin dashboard. Built with scalability and performance in mind.",
+      imgUrl: upcomingproject,
+      imgWidth: "180px",
+      imgHeight: "180px",
+      date: "2023-11-08",
+      link: "https://github.com/yourusername/ecommerce-platform",
+      demoLink: "https://ecommerce-demo.netlify.app",
+      status: "Completed",
+      technologies: ["React", "Node.js", "Express", "PostgreSQL", "Stripe", "AWS"],
+      categories: ["Web Development", "Software Engineering"]
+    },
+    {
+      id: 4,
+      title: "Mobile Fitness App",
+      description: "Cross-platform mobile application for fitness tracking with workout plans, progress monitoring, and social features.",
+      imgUrl: upcomingproject,
+      imgWidth: "180px",
+      imgHeight: "180px",
+      date: "2024-02-10",
+      link: "https://github.com/yourusername/fitness-app",
+      demoLink: null,
+      status: "Planned",
+      technologies: ["React Native", "Firebase", "Redux", "Expo"],
+      categories: ["Mobile Development", "Software Engineering"]
+    },
+    {
+      id: 5,
+      title: "Crypto Trading Bot",
+      description: "Automated cryptocurrency trading bot with machine learning algorithms for market prediction and risk management.",
+      imgUrl: upcomingproject,
+      imgWidth: "180px",
+      imgHeight: "180px",
+      date: "2023-09-22",
+      link: "https://github.com/yourusername/crypto-bot",
+      demoLink: null,
+      status: "Completed",
+      technologies: ["Python", "TensorFlow", "Binance API", "Docker", "PostgreSQL"],
+      categories: ["AI", "Software Engineering", "Data Analysis"]
+    }
   ];
+
+  // Sort projects by date (most recent first)
+  const sortedProjects = projectsAll.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <section className="project" id="project">
@@ -36,9 +88,9 @@ export const Projects = () => {
         <Row>
           <Col>
             <h2>PROJECTS</h2>
-            <p>Throughout my journey, I have created multiple projects. Below, I have mentioned my most <span>notable projects</span>. Some of them are under development.</p>
+            <p>Throughout my journey, I have created multiple projects. Below, I have mentioned my most <span>notable projects</span>. Each project showcases different technologies and problem-solving approaches.</p>
             <div className="project-bx-all">
-              <ProjectsCarousel projects={projectsAll} />
+              <ProjectsCarousel projects={sortedProjects} />
             </div>
           </Col>
         </Row>
