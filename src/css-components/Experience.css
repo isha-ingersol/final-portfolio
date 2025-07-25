@@ -1,0 +1,538 @@
+/************ Custom Colors CSS ************/
+:root {
+  --text-color: #301B11;
+  --background-color-1: #F6F2EE;
+  --background-color-2: #EFE7DF;
+  --main-accent-color: #CC907B;
+  --accent-color-1: #E5BCAD;
+  --accent-color-2: #E6D4C4;
+  --accent-color-3: #F6E0D6;
+}
+
+@font-face {
+	font-family: CatchyMager;
+	src: url('../assets/font/CatchyMagerRegular.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: CocoGothicBold;
+	src: url('../assets/font/CocoGothicBold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: CocoGothicRegular;
+	src: url('../assets/font/CocoGothicRegular.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: PlayfairDisplayRegular;
+	src: url('../assets/font/PlayfairDisplayRegular.ttf');
+	font-weight: 700;
+}
+
+.experience p {
+  color: var(--text-color);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0;
+  font-family: 'CatchyMager', sans-serif;
+}
+
+.experience span {
+  color: var(--main-accent-color);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.experience h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 7.5px;
+  font-family: 'CocoGothicBold', sans-serif;
+}
+
+/************ Base Styles ************/
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: var(--background-color-1);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.experience-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/************ Timeline Styles ************/
+.timeline-wrapper {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--main-accent-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.4rem;
+  top: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 4px solid var(--main-accent-color);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(204, 144, 123, 0.3);
+  z-index: 2;
+}
+
+/************ Card Styles ************/
+.experience-card {
+  margin-left: 4rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(48, 27, 17, 0.1), 0 1px 3px rgba(48, 27, 17, 0.08);
+  border: 1px solid var(--accent-color-3);
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  box-shadow: 0 10px 25px rgba(48, 27, 17, 0.15), 0 4px 10px rgba(48, 27, 17, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/************ Card Header ************/
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.type-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.type-icon {
+  font-size: 1.5rem;
+}
+
+.type-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.education-tag {
+  background: var(--accent-color-3);
+  color: var(--text-color);
+  border-color: var(--accent-color-2);
+}
+
+.internship-tag {
+  background: var(--accent-color-2);
+  color: var(--text-color);
+  border-color: var(--accent-color-1);
+}
+
+.work-tag {
+  background: var(--accent-color-1);
+  color: var(--text-color);
+  border-color: var(--main-accent-color);
+}
+
+.volunteer-tag {
+  background: var(--main-accent-color);
+  color: white;
+  border-color: var(--main-accent-color);
+}
+
+.position-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.company-name {
+  font-size: 1.125rem;
+  color: var(--main-accent-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.date-location {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.date-info,
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+  justify-content: flex-end;
+}
+
+.date-info .icon,
+.location-info .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ongoing {
+  color: var(--main-accent-color);
+  font-weight: 600;
+}
+
+/************ Skills Section ************/
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  padding: 0.5rem 0.75rem;
+  background: var(--accent-color-3);
+  color: var(--text-color);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--accent-color-2);
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: var(--accent-color-2);
+  border-color: var(--accent-color-1);
+  transform: translateY(-1px);
+}
+
+/************ Description ************/
+.description {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  margin: 2px 0;
+  line-height: 1.3;
+}
+
+/************ Actions ************/
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--main-accent-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.action-button:hover {
+  color: var(--text-color);
+  transform: translateY(-1px);
+}
+
+.action-button .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.link-button {
+  color: var(--main-accent-color);
+}
+
+/************ Stats Section ************/
+.stats-section {
+  margin-top: 4rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(48, 27, 17, 0.1);
+  padding: 2rem;
+  border: 1px solid var(--accent-color-3);
+}
+
+.stats-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  text-transform: capitalize;
+}
+
+/************ Mobile Styles (Phone) ************/
+@media (max-width: 480px) {
+  .experience-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-subtitle {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .timeline-wrapper {
+    padding-left: 1rem;
+  }
+
+  .timeline-line {
+    left: 1rem;
+  }
+
+  .timeline-dot {
+    left: -0.275rem;
+    top: 1.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-width: 3px;
+  }
+
+  .experience-card {
+    margin-left: 2.5rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .date-location {
+    text-align: left;
+    width: 100%;
+  }
+
+  .date-info,
+  .location-info {
+    justify-content: flex-start;
+  }
+
+  .position-title {
+    font-size: 1.125rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stats-section {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+/************ Tablet Styles ************/
+@media (min-width: 481px) and (max-width: 768px) {
+  .experience-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .experience-title {
+    font-size: 2.25rem;
+  }
+
+  .timeline-wrapper {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-line {
+    left: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: -0.35rem;
+    top: 1.5rem;
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .experience-card {
+    margin-left: 3.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-location {
+    text-align: left;
+    width: 100%;
+  }
+
+  .date-info,
+  .location-info {
+    justify-content: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/************ Small Desktop/Large Tablet ************/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .experience-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-header {
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/************ Large Desktop ************/
+@media (min-width: 1025px) {
+  .experience-container {
+    padding: 3rem 2rem;
+  }
+
+  .experience-title {
+    font-size: 3rem;
+  }
+
+  .experience-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .card-content {
+    padding: 2rem;
+  }
+
+  .stats-section {
+    padding: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}

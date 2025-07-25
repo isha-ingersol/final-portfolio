@@ -1,57 +1,74 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../css-components/SkillsCarousel.css';
 
 const SkillsCarousel = ({ skills }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 6;
-  const scrollRef = useRef(null);
+  const carouselRef = useRef(null);
+  const [itemsToShow, setItemsToShow] = useState(6);
+  const [scrollAmount, setScrollAmount] = useState(0);
 
-  const scrollToIndex = (index) => {
-    if (scrollRef.current) {
-      const containerWidth = scrollRef.current.offsetWidth;
-      const itemWidth = containerWidth / itemsToShow;
-      scrollRef.current.scrollTo({
-        left: index * itemWidth,
-        behavior: 'smooth'
+  useEffect(() => {
+    const updateItemsToShow = () => {
+      const width = window.innerWidth;
+      if (width <= 767) {
+        setItemsToShow(3);
+      } else if (width <= 1024) {
+        setItemsToShow(4);
+      } else {
+        setItemsToShow(6);
+      }
+    };
+
+    updateItemsToShow();
+    window.addEventListener('resize', updateItemsToShow);
+    return () => window.removeEventListener('resize', updateItemsToShow);
+  }, []);
+
+  useEffect(() => {
+    // Compute scroll amount per step (based on item width)
+    if (carouselRef.current) {
+      const item = carouselRef.current.querySelector('.skill-item');
+      if (item) {
+        const itemWidth = item.offsetWidth + parseFloat(getComputedStyle(item).marginRight);
+        setScrollAmount(itemWidth * (itemsToShow - 1));
+      }
+    }
+  }, [itemsToShow, skills]);
+
+  const handlePrev = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -scrollAmount,
+        behaviour: 'smooth',
       });
     }
   };
 
-  const handlePrev = () => {
-    const newIndex = Math.max(currentIndex - 5, 0);
-    setCurrentIndex(newIndex);
-    scrollToIndex(newIndex);
-  };
-
   const handleNext = () => {
-    const newIndex = Math.min(currentIndex + 5, skills.length - itemsToShow);
-    setCurrentIndex(newIndex);
-    scrollToIndex(newIndex);
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: scrollAmount,
+        behaviour: 'smooth',
+      });
+    }
   };
 
   return (
     <div className="skills-carousel-container">
-      <div className="skills-carousel" ref={scrollRef}>
-        {skills.map((skill, index) => (
-          <div className="skill-item" key={index}>
-            <img src={skill.imgSrc} alt={skill.altText} />
-            <p className="skill-name">{skill.name}</p>
-          </div>
-        ))}
+      <div className="skills-carousel-wrapper" ref={carouselRef}>
+        <div className="skills-carousel">
+          {skills.map((skill, index) => (
+            <div className="skill-item" key={index}>
+              <img src={skill.imgSrc} alt={skill.altText} />
+              <p className="skill-name">{skill.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="skills-carousel-buttons">
-        <button
-          onClick={handlePrev}
-          className="skills-carousel-button"
-          disabled={currentIndex === 0}
-        >
+        <button onClick={handlePrev} className="skills-carousel-button">
           &#8592;
         </button>
-        <button
-          onClick={handleNext}
-          className="skills-carousel-button"
-          disabled={currentIndex >= skills.length - itemsToShow}
-        >
+        <button onClick={handleNext} className="skills-carousel-button">
           &#8594;
         </button>
       </div>
