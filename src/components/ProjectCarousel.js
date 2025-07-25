@@ -130,7 +130,7 @@ const ProjectsCarousel = ({ projects }) => {
               <div className="carousel-card-actions">
                 {project.link && (
                   <button 
-                    className="carousel-card-button primary"
+                    className="carousel-card-button viewcode"
                     onClick={() => handleLinkClick(project.link)}
                   >
                     View Code
@@ -138,10 +138,20 @@ const ProjectsCarousel = ({ projects }) => {
                 )}
                 {project.demoLink && (
                   <button 
-                    className="carousel-card-button secondary"
+                    className="carousel-card-button livedemo"
                     onClick={() => handleLinkClick(project.demoLink)}
                   >
                     Live Demo
+                  </button>
+                )}
+              </div>
+              <div>
+                {project.documentation && (
+                  <button 
+                    className="carousel-card-button viewdocumentation"
+                    onClick={() => handleLinkClick(project.documentation)}
+                  >
+                    View Documentation
                   </button>
                 )}
               </div>

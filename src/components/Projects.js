@@ -5,6 +5,8 @@ import threads from "../assets/img/project-threads-logo.png";
 import upcomingproject from "../assets/img/upcoming-project.png";
 import '../css-components/Projects.css';
 
+import DyscoverAI from "../assets/project-logos/DyscoverAI.png"
+
 export const Projects = () => {
   const projectsAll = [
     {
@@ -12,28 +14,32 @@ export const Projects = () => {
       title: "Threads Clone",
       description: "A full-stack social media application clone with real-time features, user authentication, and modern UI design. Features include post creation, commenting, following system, and responsive design.",
       imgUrl: threads,
-      imgWidth: "180px",
+      imgWidth: "120px",
       imgHeight: "180px",
-      date: "2024-03-15", // ISO format for easy sorting
-      link: "https://github.com/yourusername/threads-clone",
-      demoLink: "https://threads-clone-demo.vercel.app",
+      date: "2025-06-01",
+      link: null,
+      demoLink: null,
+      documentation: null,
       status: "In Development",
       technologies: ["NextJS", "TypeScript", "TailwindCSS", "Clerk", "MongoDB", "Vercel"],
       categories: ["Web Development", "Full Stack"]
     },
     {
       id: 2,
-      title: "AI Data Analysis Tool",
-      description: "Machine learning powered data analysis platform that provides automated insights, visualizations, and predictive analytics for business data.",
-      imgUrl: upcomingproject,
-      imgWidth: "180px",
+      title: "DyscoverAI",
+      description: [
+        "A full-stack system with deep learning models to detect learning disabilities in children and young adults using handwriting analysis.",
+      ],
+      imgUrl: DyscoverAI,
+      imgWidth: "250px",
       imgHeight: "180px",
-      date: "2024-01-20",
-      link: "https://github.com/yourusername/ai-data-tool",
+      date: "2025-04-17",
+      link: "https://github.com/isha-ingersol/final-year-project",
       demoLink: null,
+      documentation: "/files/DyscoverAI.pdf",
       status: "Completed",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "Plotly"],
-      categories: ["AI", "Data Science", "Data Analysis"]
+      technologies: ["Python", "Handwriting Image Analysis", "Neural Networks", "TensorFlow/Keras", "MobileNetV2", "REST API", "Docker", "React", "Vite", "Flask", "AWS EC2", "Grad-CAM", "UI/UX",],
+      categories: ["Artificial Intelligence", "Data Science", "Data Engineering", "Machine Learning", "Full Stack Web Development",]
     },
     {
       id: 3,
@@ -42,41 +48,44 @@ export const Projects = () => {
       imgUrl: upcomingproject,
       imgWidth: "180px",
       imgHeight: "180px",
-      date: "2023-11-08",
-      link: "https://github.com/yourusername/ecommerce-platform",
-      demoLink: "https://ecommerce-demo.netlify.app",
-      status: "Completed",
+      date: "2025-06-01",
+      link: null,
+      demoLink: null,
+      documentation: null,
+      status: "Planned",
       technologies: ["React", "Node.js", "Express", "PostgreSQL", "Stripe", "AWS"],
       categories: ["Web Development", "Software Engineering"]
     },
-    {
-      id: 4,
-      title: "Mobile Fitness App",
-      description: "Cross-platform mobile application for fitness tracking with workout plans, progress monitoring, and social features.",
-      imgUrl: upcomingproject,
-      imgWidth: "180px",
-      imgHeight: "180px",
-      date: "2024-02-10",
-      link: "https://github.com/yourusername/fitness-app",
-      demoLink: null,
-      status: "Planned",
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
-      categories: ["Mobile Development", "Software Engineering"]
-    },
-    {
-      id: 5,
-      title: "Crypto Trading Bot",
-      description: "Automated cryptocurrency trading bot with machine learning algorithms for market prediction and risk management.",
-      imgUrl: upcomingproject,
-      imgWidth: "180px",
-      imgHeight: "180px",
-      date: "2023-09-22",
-      link: "https://github.com/yourusername/crypto-bot",
-      demoLink: null,
-      status: "Completed",
-      technologies: ["Python", "TensorFlow", "Binance API", "Docker", "PostgreSQL"],
-      categories: ["AI", "Software Engineering", "Data Analysis"]
-    }
+    // {
+    //   id: 4,
+    //   title: "Mobile Fitness App",
+    //   description: "Cross-platform mobile application for fitness tracking with workout plans, progress monitoring, and social features.",
+    //   imgUrl: upcomingproject,
+    //   imgWidth: "180px",
+    //   imgHeight: "180px",
+    //   date: "2024-02-10",
+    //   link: "https://github.com/yourusername/fitness-app",
+    //   demoLink: null,
+    //   documentation: null,
+    //   status: "Planned",
+    //   technologies: ["React Native", "Firebase", "Redux", "Expo"],
+    //   categories: ["Mobile Development", "Software Engineering"]
+    // },
+    // {
+    //   id: 5,
+    //   title: "Crypto Trading Bot",
+    //   description: "Automated cryptocurrency trading bot with machine learning algorithms for market prediction and risk management.",
+    //   imgUrl: upcomingproject,
+    //   imgWidth: "180px",
+    //   imgHeight: "180px",
+    //   date: "2023-09-22",
+    //   link: "https://github.com/yourusername/crypto-bot",
+    //   demoLink: null,
+    //   documentation: null,
+    //   status: "Completed",
+    //   technologies: ["Python", "TensorFlow", "Binance API", "Docker", "PostgreSQL"],
+    //   categories: ["AI", "Software Engineering", "Data Analysis"]
+    // }
   ];
 
   // Sort projects by date (most recent first)
