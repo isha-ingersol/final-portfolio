@@ -58,7 +58,7 @@ const Experience = () => {
         "Graduated with First Class Honours in an Integrated Master’s (MEng) in Computer Science and Software Engineering",
         "Relevant coursework: Data Structures and Algorithms, Data Science, Software Engineering, Machine Learning, Database Systems, Full-Stack Application Development, Web Development.",
       ],
-        skills: [
+      skills: [
         "Java",
         "Python",
         "C++",
@@ -170,137 +170,138 @@ const Experience = () => {
   };
 
   return (
-    <div className="experience-container" id="experience">
-      <div className="experience-header">
-        <h1 className="experience-title">My Journey</h1>
-        <p className="experience-subtitle">
-          A timeline of my education, work experiences, and projects. Each of which has shaped my skills and passion for technology.
-        </p>
-      </div>
+    <div className="experience" id="experience">
+      <div className="experience-container" id="experience">
+        <div className="experience-header">
+          <h2>EXPERIENCE</h2>
+            <p> A timeline of my education, work experiences, and projects. Each of which has shaped my skills and passion for technology.</p>
+        </div>
 
-      <div className="timeline-wrapper">
-        {/* Timeline line */}
-        <div className="timeline-line"></div>
+        <div className="timeline-wrapper">
+          {/* Timeline line */}
+          <div className="timeline-line"></div>
 
-        {sortedExperiences.map((experience, index) => (
-          <div key={experience.id} className="timeline-item">
-            {/* Timeline dot */}
-            <div className="timeline-dot"></div>
+          {sortedExperiences.map((experience, index) => (
+            <div key={experience.id} className="timeline-item">
+              {/* Timeline dot */}
+              <div className="timeline-dot"></div>
 
-            {/* Content card */}
-            <div className="experience-card">
-              <div className="card-content">
-                {/* Header */}
-                <div className="card-header">
-                  <div className="header-main">
-                    <div className="type-info">
-                      <span className="type-icon">
-                        {getTypeIcon(experience.type)}
-                      </span>
-                      <span
-                        className={`type-tag ${getTypeColor(experience.type)}`}
-                      >
-                        {experience.type.charAt(0).toUpperCase() +
-                          experience.type.slice(1)}
-                      </span>
+              {/* Content card */}
+              <div className="experience-card">
+                <div className="card-content">
+                  {/* Header */}
+                  <div className="card-header">
+                    <div className="header-main">
+                      <div className="type-info">
+                        <span className="type-icon">
+                          {getTypeIcon(experience.type)}
+                        </span>
+                        <span
+                          className={`type-tag ${getTypeColor(
+                            experience.type
+                          )}`}
+                        >
+                          {experience.type.charAt(0).toUpperCase() +
+                            experience.type.slice(1)}
+                        </span>
+                      </div>
+                      <h3 className="position-title">{experience.title}</h3>
+                      <h4 className="company-name">{experience.company}</h4>
                     </div>
-                    <h3 className="position-title">{experience.title}</h3>
-                    <h4 className="company-name">{experience.company}</h4>
+
+                    <div className="date-location">
+                      <div className="date-info">
+                        <Calendar className="icon" />
+                        <span>
+                          {formatDate(experience.startDate)} -{" "}
+                          {isOngoing(experience.endDate) ? (
+                            <span className="ongoing">Present</span>
+                          ) : (
+                            formatDate(experience.endDate)
+                          )}
+                        </span>
+                      </div>
+                      <div className="location-info">
+                        <MapPin className="icon" />
+                        <span>{experience.location}</span>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="date-location">
-                    <div className="date-info">
-                      <Calendar className="icon" />
-                      <span>
-                        {formatDate(experience.startDate)} -{" "}
-                        {isOngoing(experience.endDate) ? (
-                          <span className="ongoing">Present</span>
-                        ) : (
-                          formatDate(experience.endDate)
-                        )}
+                  {/* Skills tags */}
+                  <div className="skills-container">
+                    {experience.skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="skill-tag">
+                        {skill}
                       </span>
-                    </div>
-                    <div className="location-info">
-                      <MapPin className="icon" />
-                      <span>{experience.location}</span>
-                    </div>
+                    ))}
                   </div>
-                </div>
 
-                {/* Skills tags */}
-                <div className="skills-container">
-                  {experience.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="skill-tag">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Description preview */}
-                <div className="description">
-                  {Array.isArray(experience.description) ? (
-                    expandedItems.has(experience.id) ? (
-                      experience.description.map((line, index) => (
-                        <p key={index}>{line}</p>
-                      ))
+                  {/* Description preview */}
+                  <div className="description">
+                    {Array.isArray(experience.description) ? (
+                      expandedItems.has(experience.id) ? (
+                        experience.description.map((line, index) => (
+                          <p key={index}>{line}</p>
+                        ))
+                      ) : (
+                        <p>{experience.description[0]}</p>
+                      ) // Only show first bullet when collapsed
                     ) : (
-                      <p>{experience.description[0]}</p>
-                    ) // Only show first bullet when collapsed
-                  ) : (
-                    <p>
-                      {expandedItems.has(experience.id)
-                        ? experience.description
-                        : `${experience.description.substring(0, 120)}${
-                            experience.description.length > 120 ? "..." : ""
-                          }`}
-                    </p>
-                  )}
-                </div>
-
-                {/* Actions */}
-                <div className="card-actions">
-                  <div className="action-buttons">
-                    {(Array.isArray(experience.description) ||
-                      experience.description.length > 120) && (
-                      <button
-                        onClick={() => toggleExpanded(experience.id)}
-                        className="action-button"
-                      >
-                        {expandedItems.has(experience.id) ? (
-                          <>
-                            <ChevronUp className="icon" />
-                            Show Less
-                          </>
-                        ) : (
-                          <>
-                            <ChevronDown className="icon" />
-                            Read More
-                          </>
-                        )}
-                      </button>
+                      <p>
+                        {expandedItems.has(experience.id)
+                          ? experience.description
+                          : `${experience.description.substring(0, 120)}${
+                              experience.description.length > 120 ? "..." : ""
+                            }`}
+                      </p>
                     )}
+                  </div>
 
-                    {experience.link && (
-                      <a
-                        href={experience.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="action-button link-button"
-                      >
-                        <ExternalLink className="icon" />
-                        Learn More
-                      </a>
-                    )}
+                  {/* Actions */}
+                  <div className="card-actions">
+                    <div className="action-buttons">
+                      {(Array.isArray(experience.description) ||
+                        experience.description.length > 120) && (
+                        <button
+                          onClick={() => toggleExpanded(experience.id)}
+                          className="action-button"
+                        >
+                          {expandedItems.has(experience.id) ? (
+                            <>
+                              <ChevronUp className="icon" />
+                              Show Less
+                            </>
+                          ) : (
+                            <>
+                              <ChevronDown className="icon" />
+                              Read More
+                            </>
+                          )}
+                        </button>
+                      )}
+
+                      {experience.link && (
+                        <a
+                          href={experience.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="action-button link-button"
+                        >
+                          <ExternalLink className="icon" />
+                          Learn More
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Stats section */}
-      {/* <div className="stats-section">
+        {/* Stats section */}
+        {/* <div className="stats-section">
         <h2 className="stats-title">Experience Summary</h2>
         <div className="stats-grid">
           {Object.entries(
@@ -317,6 +318,7 @@ const Experience = () => {
           ))}
         </div>
       </div> */}
+      </div>
     </div>
   );
 };

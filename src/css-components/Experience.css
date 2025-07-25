@@ -7,61 +7,47 @@
   --accent-color-1: #E5BCAD;
   --accent-color-2: #E6D4C4;
   --accent-color-3: #F6E0D6;
+  --white-alt: #FCFAF7;
 }
 
 @font-face {
-	font-family: CatchyMager;
-	src: url('../assets/font/CatchyMagerRegular.ttf');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: CocoGothicBold;
-	src: url('../assets/font/CocoGothicBold.ttf');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: CocoGothicRegular;
-	src: url('../assets/font/CocoGothicRegular.ttf');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: PlayfairDisplayRegular;
-	src: url('../assets/font/PlayfairDisplayRegular.ttf');
-	font-weight: 700;
-}
-
-.experience p {
-  color: var(--text-color);
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px 0;
-  font-family: 'CatchyMager', sans-serif;
-}
-
-.experience span {
-  color: var(--main-accent-color);
+  font-family: CatchyMager;
+  src: url('../assets/font/CatchyMagerRegular.ttf');
   font-weight: 700;
-  font-style: italic;
 }
 
-.experience h2 {
-  text-align: center;
-  font-size: 35px;
+@font-face {
+  font-family: CocoGothicBold;
+  src: url('../assets/font/CocoGothicBold.ttf');
   font-weight: 700;
-  letter-spacing: 7.5px;
-  font-family: 'CocoGothicBold', sans-serif;
+}
+
+@font-face {
+  font-family: CocoGothicRegular;
+  src: url('../assets/font/CocoGothicRegular.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: PlayfairDisplayRegular;
+  src: url('../assets/font/PlayfairDisplayRegular.ttf');
+  font-weight: 700;
 }
 
 /************ Base Styles ************/
+.experience{
+  /* background: var(--background-color-2); */
+
+  padding: 30px 0 30px 0;
+  position: relative;
+  /* background-color: var(--background-color-1); */
+  background-size: cover;
+}
+
 .experience-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  background: var(--background-color-1);
   min-height: 100vh;
   color: var(--text-color);
 }
@@ -71,21 +57,30 @@
   margin-bottom: 3rem;
 }
 
-.experience-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+.experience-header h2 {
+  /* font-size: 2.5rem; */
+  /* font-weight: 800; */
   color: var(--text-color);
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  /* letter-spacing: -0.02em; */
+
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 7.5px;
+  font-family: 'CocoGothicBold', sans-serif;
 }
 
-.experience-subtitle {
-  font-size: 1.125rem;
+.experience-header p {
   color: var(--text-color);
-  opacity: 0.8;
-  max-width: 42rem;
-  margin: 0 auto;
-  line-height: 1.6;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 25px auto;
+  text-align: center;
+  /* width: 56%; */
+  
+  justify-content: center;
 }
 
 /************ Timeline Styles ************/
@@ -114,7 +109,7 @@
   top: 1.5rem;
   width: 1rem;
   height: 1rem;
-  background: white;
+  background: var(--white-alt);
   border: 4px solid var(--main-accent-color);
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(204, 144, 123, 0.3);
@@ -124,7 +119,7 @@
 /************ Card Styles ************/
 .experience-card {
   margin-left: 4rem;
-  background: white;
+  background: var(--white-alt);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(48, 27, 17, 0.1), 0 1px 3px rgba(48, 27, 17, 0.08);
   border: 1px solid var(--accent-color-3);
@@ -175,15 +170,15 @@
 }
 
 .education-tag {
-  background: var(--accent-color-3);
-  color: var(--text-color);
-  border-color: var(--accent-color-2);
+  background: var(--main-accent-color);
+  color: var(--white-alt);
+  border-color: var(--main-accent-color);
 }
 
 .internship-tag {
-  background: var(--accent-color-2);
+  background: var(--accent-color-3);
   color: var(--text-color);
-  border-color: var(--accent-color-1);
+  border-color: var(--accent-color-2);
 }
 
 .work-tag {
@@ -193,9 +188,9 @@
 }
 
 .volunteer-tag {
-  background: var(--main-accent-color);
-  color: white;
-  border-color: var(--main-accent-color);
+  background: var(--accent-color-2);
+  color: var(--text-color);
+  border-color: var(--accent-color-1);
 }
 
 .position-title {
@@ -256,12 +251,12 @@
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid var(--accent-color-2);
+  border: 1px solid var(--accent-color-3);
   transition: all 0.2s ease;
 }
 
 .skill-tag:hover {
-  background: var(--accent-color-2);
+  background: var(--background-color-1);
   border-color: var(--accent-color-1);
   transform: translateY(-1px);
 }
@@ -322,7 +317,7 @@
 /************ Stats Section ************/
 .stats-section {
   margin-top: 4rem;
-  background: white;
+  background: var(--white-alt);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(48, 27, 17, 0.1);
   padding: 2rem;
@@ -390,7 +385,7 @@
   }
 
   .timeline-dot {
-    left: -0.275rem;
+    left: -0.3rem;
     top: 1.5rem;
     width: 0.75rem;
     height: 0.75rem;
@@ -459,7 +454,7 @@
   }
 
   .timeline-dot {
-    left: -0.35rem;
+    left: -0.375rem;
     top: 1.5rem;
     width: 0.875rem;
     height: 0.875rem;
