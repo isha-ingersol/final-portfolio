@@ -145,7 +145,7 @@ const ProjectsCarousel = ({ projects }) => {
                   </button>
                 )}
               </div>
-              <div>
+              <div className="ViewDocumentation">
                 {project.documentation && (
                   <button 
                     className="carousel-card-button viewdocumentation"
