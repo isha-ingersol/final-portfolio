@@ -121,7 +121,7 @@
   margin-left: 4rem;
   background: var(--white-alt);
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(48, 27, 17, 0.1), 0 1px 3px rgba(48, 27, 17, 0.08);
+  box-shadow: 0 1px 1px rgba(48, 27, 17, 0.1), 0 1px 1px rgba(48, 27, 17, 0.08);
   border: 1px solid var(--accent-color-3);
   transition: all 0.3s ease;
 }

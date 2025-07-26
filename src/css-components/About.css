@@ -78,14 +78,16 @@
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px 0;
-  font-family: 'CatchyMager', sans-serif;
+  margin: 14px auto 25px auto;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .about span {
-  color: var(--main-accent-color);
+  /* color: var(--main-accent-color); */
   font-weight: 700;
   font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--main-accent-color); 
 }
 
 .about ol {
